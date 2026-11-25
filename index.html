@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <h1 id="h1Form">Cadastro de Produtos</h1>
+
+    <section>
+
+    <form id="formRegistro">
+
+      <div class="campos">
+        <input type="hidden" id="registroId" value="">
+
+        <label>
+          Código: <input type="text" id="codigo" placeholder="Código do produto" required>
+        </label>
+
+        <label>
+          Produto: <input type="text" id="produto" minlength="5" placeholder="Nome do produto" required>
+        </label>
+
+        <label>
+          Descrição: <input type="text" id="descricao" placeholder="Descrição do produto" required>
+        </label>
+
+        <label>
+          Preço: <input type="text" id="preco" placeholder="R$" required>
+        </label>
+
+         
+       </div> 
+
+       <div class="foto">
+        
+
+        <div id="containerImg">
+            <img id="previa-imagem" src="imagens/" alt="imagem selecionada">
+          </div>
+
+        <label>
+            Foto: <input type="text" id="foto" maxlength="10" placeholder="Imagem do produto" required>
+          </label>
+
+        <div class="botoes">
+          <button type="submit" id="btnCadastrar">Cadastrar Produto</button>
+          <button type="button" id="btnExcluir" class="hidden">Confirmar exclusão</button>
+          <button type="button" id="btnCancelar">Cancelar</button>
+        </div>
+
+      </div>
+
+    </form>
+
+    </section>
+
+    <table id="tabelaRegistros">
+        <thead>
+            <tr>
+                <th>Imagem</th>
+                <th>Código</th>
+                <th>Produto</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
